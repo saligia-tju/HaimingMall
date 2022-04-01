@@ -1,0 +1,222 @@
+body {
+    background-color: #efefef;
+}
+
+.main {
+    background-color: white;
+    margin: 30px;
+}
+
+.index-footer {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    padding: 0 0 15px 0
+}
+
+.btn-publish {
+    float: right;
+    margin-bottom: 15px;
+}
+
+.btn-submit {
+    margin: 10px 0;
+}
+
+.media-object2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+}
+
+.text-desc {
+    font-size: 12px;
+    font-weight: normal;
+    color: #999999;
+}
+
+.price {
+    width: 20px;
+    margin-right: 5px;
+    padding-bottom: 15px;
+}
+
+.publish-tag-tab {
+    display: none;
+    margin-top: 10px;
+}
+
+.publish-tag-tags {
+    padding-top: 10px;
+}
+
+.publish-tag-panel {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+.community-menu {
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+.question-title {
+    margin-top: 25px;
+}
+
+.question-tag {
+    cursor: pointer;
+    margin: 5px 5px;
+    display: inline-block; /*不会中间断开*/
+    white-space: normal;
+}
+
+.question-related {
+    line-height: 20px;
+    font-size: 15px;
+    margin-left: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+.media-body {
+    padding-top: 11px
+}
+
+.btn-comment {
+    /*代表上下边距为10px，左右为0*/
+    margin: 10px 0;
+}
+
+.btn-success {
+    float: right;
+    margin-bottom: 10px;
+}
+
+.comment-sp {
+    margin-top: 0px;
+}
+
+.comments {
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+
+}
+
+.menu {
+    margin-top: 5px;
+    color: #999;
+}
+
+.menu-date {
+    color: #999;
+}
+
+.menu .icon {
+    font-size: 15px;
+    margin-right: 6px;
+    /*鼠标悬浮时为小手*/
+    cursor: pointer;
+}
+
+.menu .comment-icon {
+    font-size: 15px;
+    margin-right: 6px;
+    /*鼠标悬浮时为小手*/
+    cursor: pointer;
+}
+
+.menu .comment-icon:hover {
+    color: #499ef3;
+}
+
+.menu .active {
+    color: #499ef3;
+}
+
+.menu .icon:hover {
+    color: #499ef3;
+}
+
+.sub-comments {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding-top: 15px;
+}
+
+.sub-comments .btn {
+    margin: 10px 0;
+}
+
+.v-unit {
+    padding-right: 5px;
+    color: #999;
+}
+
+.v-value {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d22147;
+}
+
+.p-doc {
+    width: 970px;
+    margin: 0 auto;
+}
+
+.act-btn {
+    margin-top: 100px;
+    margin-left: 300px;
+}
+
+.cart-count {
+    width: 46px;
+}
+
+.btn-cart {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.login {
+    margin: 0;
+    display: table;
+    table-layout: auto;
+    border-spacing: 0;
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.fmitem {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font: 14px/1.5 "Microsoft YaHei", "微软雅黑", "宋体";
+    color: #333;
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+    display: table-row;
+}
+
+.li-line{
+
+    display : inline ;
+    white-space : nowrap ;
+    padding : 10px 20px ;
+    background :pink;
+    float: left;
+    list-style: none;
+
+}

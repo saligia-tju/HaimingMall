@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div th:fragment="nav">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">首页</span>
+
+                </button>
+                <a class="navbar-brand" href="/">首页</a>
+            </div>
+
+
+            <div>
+                <ul class="navbar-right navbar-brand">
+                    <div th:if="${session.user != null}" style="{float: left;list-style:none}">
+                        <ul th:if="${session.user.name} eq 'buyer'">
+                            <li role="presentation">
+                                买家你好，buyer!<a th:href="@{/logout}">[退出]</a>
+                            </li>
+                            <li role="presentation">
+                                <a th:href="@{/account}">账务</a>
+                            </li>
+
+                            <li role="presentation">
+                                <a th:href="@{/cart}">购物车</a>
+                            </li>
+
+
+                        </ul>
+
+                        <ul th:if="${session.user.name} eq 'seller'">
+                            <li role="presentation">
+                                卖家你好，seller!<a th:href="@{/logout}">[退出]</a>
+                                <a></a>
+                            </li>
+                            <li role="presentation">
+                                <a th:href="@{/publish}">发布</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                    <li role="presentation" th:unless=" ${session.user != null}"><a th:href="@{/login}">[登录]</a></li>
+
+                </ul>
+            </div>
+
+
+        </div>
+    </nav>
+</div>
+</body>
+</html>

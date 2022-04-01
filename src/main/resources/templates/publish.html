@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>发布-海明商城</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/haimingMall.css">
+    <link rel="stylesheet" href="/css/editormd.min.css">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="/js/haimingMall.js" type="application/javascript"></script>
+    <script src="/js/editormd.min.js" type="application/javascript"></script>
+
+</head>
+<body>
+<div th:insert="~{navigation::nav}"></div>
+<div class="container-fluid main">
+    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+        <h2><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 内容发布</h2>
+        <form action="/publish" method="post">
+            <input type="hidden" name="id" >
+            <div class="form-group">
+                <label for="name">商品名称：</label>
+                <input type="text" class="form-control" id="name" name="name"
+                       placeholder="问题标题...(2-80字符)"
+                       autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="abs">摘要：</label>
+                <input type="text" class="form-control"  id="abs" name="abs"
+                       placeholder="商品摘要...(2-140字符)"
+                       autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="InputFile">图片上传</label>
+                <div class="form-group" id="uploadType">
+                    <label>
+                        <input name="picture" type="radio" value="url"  onclick="setNoVisibility()" checked>
+                        图片地址
+                    </label>
+                    <label>
+                        <input name="picture" type="radio" value="file"  onclick="setVisibility()" >
+                        本地上传
+                    </label>
+                </div>
+
+                <div class="form-group" id="urlUpload" style="display: block">
+                    <input class="form-group" name="urlUpload" placeholder="图片地址">
+                </div>
+
+                <div class="form-group" id="fileUpload" style="display: none">
+                    <input type="file" id="InputFile" name="fileUpload">
+                    <!--
+                    <button id="upload" onclick="uploadFile()" class="btn btn-info btn-submit">
+                        上传
+                    </button>
+                    -->
+                    <p class="help-block">图片限制大小为<1MB</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description">商品描述：</label>
+                <textarea class="form-control" cols="30" rows="10" th:text="${description}" name="description"
+                          id="description" placeholder="商品描述...(2-1000字符)"></textarea>
+            </div>
+
+            <div class="row col-xs-2" >
+                <label for="price">价格：</label>
+                <input type="text" class="form-control " th:value="${price}" id="price" name="price"
+                       autocomplete="off">
+            </div>
+
+            <div class="container-fluid main">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                        <div class="alert alert-danger col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                             th:text="${error}"
+                             th:if="${error != null}">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <button type="submit" class="btn btn-success btn-publish">
+                            发布
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
